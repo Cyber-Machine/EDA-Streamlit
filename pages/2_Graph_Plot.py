@@ -22,4 +22,13 @@ if plot_type == "Line Chart":
     if st.button('Plot'):
         data = df.groupby(x_axis)[y_axis].agg(sum)
         st.line_chart(data)
-# elif :
+elif plot_type =="Area Chart":
+    x_options = ['Sales','Quantity','Discount','Profit']
+    x_axis = st.selectbox('Select X Axis ', x_options)
+    y_options = ['Sales','Quantity','Discount','Profit']
+    if(x_axis in y_options):
+        y_options.remove(x_axis)
+    y_axis = st.multiselect('Select Y Axis ', y_options)
+    if st.button('Plot'):
+        data = df.groupby(x_axis)[y_axis].agg(sum)
+        st.area_chart(data)
