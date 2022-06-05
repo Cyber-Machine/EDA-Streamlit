@@ -20,10 +20,6 @@ if plot_type == "Line Chart":
     y_options = ['Sales','Quantity','Discount','Profit']
     y_axis = st.multiselect('Select Y Axis ', y_options)
     if st.button('Plot'):
-        # plt.plot(x_axis,y_axis)
-        # plt.savefig()
         data = df.groupby(x_axis)[y_axis].agg(sum)
-        # x_bar = 
-        # st.table(x_bar)
         st.line_chart(data)
 # elif :
