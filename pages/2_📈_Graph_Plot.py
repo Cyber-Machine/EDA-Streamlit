@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-# import plotly.express as px
 import matplotlib.pyplot as plt
 st.set_page_config(
     page_title = 'Plots for the Example Dataset'
+    
 )
 
 def load_data():
@@ -12,7 +12,7 @@ def load_data():
 df = load_data()
 st.header("Make Interactive plots with Superstore Data :")
 st.subheader("Select the type of Plot You want to Make :")
-plot_type = st.selectbox("Choose your type of plot" ,("Bar", "Line Chart" , "Area Chart"))
+plot_type = st.selectbox("Choose your type of plot" ,("Line Chart" , "Area Chart")) #TODO : Implement other Charts Ex : "Bar Charts"
 if plot_type == "Line Chart":
     
     x_options = ['Sales','Quantity','Discount','Profit']
