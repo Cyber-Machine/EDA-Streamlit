@@ -43,7 +43,7 @@ else :
     if st.button('Example DataSet'):
         @st.cache
         def load_data():
-            csv = pd.read_csv('Sample - Superstore.csv')
+            csv = pd.read_csv('./Datasets/Sample - Superstore.csv')
             return csv
         df = load_data()
         pr = ProfileReport(df , explorative = True)

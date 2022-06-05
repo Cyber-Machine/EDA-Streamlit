@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 def load_data():
-        csv = pd.read_csv('Sample - Superstore.csv')
+        csv = pd.read_csv('./Datasets/Sample - Superstore.csv')
         return csv
 df = load_data()
 st.header("Make Interactive plots with Superstore Data :")
